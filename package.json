@@ -1,0 +1,15 @@
+{
+  "name": "jestergaming",
+  "version": "1.0.0",
+  "description": "Intern Assignment",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "author": "Sandeepan Kalita",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2"
+  }
+}
