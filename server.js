@@ -1,7 +1,10 @@
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config({ path: "./config/config.env" });
+}
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
-const port = 3000;
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -35,6 +38,6 @@ app.post("/form-submit", (req, res) => {
     res.redirect("public/fail.html");
   }
 });
-app.listen(port, () => {
-  console.log(`Server started at port ${port}`);
+app.listen(process.env.PORT, () => {
+  console.log(`server is running on port ${process.env.PORT}`);
 });
